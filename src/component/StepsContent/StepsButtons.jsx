@@ -2,7 +2,7 @@ import { Button, message } from "antd";
 import React from "react";
 
 const StepsButtons = ({current, setCurrent , steps}) => {
-
+ console.log(current)
   const next = () => {
     setCurrent(current + 1);
   };
@@ -10,10 +10,11 @@ const StepsButtons = ({current, setCurrent , steps}) => {
   const prev = () => {
     setCurrent(current - 1);
   };
-
-  <div>
+  return <div>
     {current < steps.length - 1 && (
-      <Button type="primary" onClick={() => next()}>
+      <Button type="primary" style={{
+        backgroundColor:"#D84E67"
+      }} onClick={() => next()}>
         التالي
       </Button>
     )}

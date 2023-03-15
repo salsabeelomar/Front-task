@@ -13,8 +13,7 @@ const Header = () => {
         backgroundColor: "#fff",
       }}
     >
-      {" "}
-      <Col span={4}>
+      <Col span={5}>
         <StyledButton type="primary">الانتقال الى وضع الضيف</StyledButton>
       </Col>
       <Col span={2}>
