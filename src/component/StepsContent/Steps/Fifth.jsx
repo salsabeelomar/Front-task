@@ -1,3 +1,2 @@
-
- const FifthStep = () => {}
- export default FifthStep
+const FifthStep = () => {};
+export default FifthStep;
