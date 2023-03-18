@@ -1,7 +1,7 @@
 import { Col, Row } from "antd";
 import { Content } from "antd/es/layout/layout";
 import React, { useContext, useState } from "react";
-import CosTitle from "../../CosTitle";
+import CosTitle from "../../Titles/CusTitle";
 import { ContDiv, CusInput, GrayText, ThPa, ThText } from "../../StyledComponent";
 import Tap from "../../Taps";
 import Counter from "../../Counter";
