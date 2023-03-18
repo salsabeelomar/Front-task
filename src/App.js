@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header2 from "./component/Header";
 import { Layout } from "antd";
-import "./style.css";
+import "./styles";
 import Step from "./component/Steps";
 import { SelectProvider } from "./Context/SelectedItemsContext";
 import { ItemProvider } from "./Context/itemsContext";
@@ -9,6 +9,10 @@ import CosMenu from "./component/Menu";
 import { CurrentProvider } from "./Context/Current";
 
 const App = () => {
+  useEffect(() => {
+    document.body.dir = "rtl";
+  }, []);
+
   return (
     <Layout>
       <CosMenu />
