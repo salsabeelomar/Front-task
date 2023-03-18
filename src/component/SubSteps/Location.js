@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import GoogleMapReact from "google-map-react";
 import { ContDiv, GrayText, MapContainer, ThPa } from "../StyledComponent";
-import CosTitle from "../CosTitle";
+import CosTitle from "../Titles/CusTitle";
 import { Items } from "../../Context/itemsContext";
 import NextBtn from "../StepsContent/Operation/NextBtn";
 import { currentItems } from "../../Context/Current";

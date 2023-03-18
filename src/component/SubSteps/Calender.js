@@ -6,7 +6,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezone from "moment-timezone";
 import arLocale from "@fullcalendar/core/locales/ar";
 import { ContDiv } from "../StyledComponent";
-import CosTitle from "../CosTitle";
+import CosTitle from "../Titles/CusTitle";
 import { Col, Row } from "antd";
 import NextBtn from "../StepsContent/Operation/NextBtn";
 import { currentItems } from "../../Context/Current";

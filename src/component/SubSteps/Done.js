@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { currentItems } from "../../Context/Current";
 import { Items } from "../../Context/itemsContext";
-import CosTitle from "../CosTitle";
+import CosTitle from "../Titles/CusTitle";
 import { ContDiv, GrayText } from "../StyledComponent";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import NextBtn from "../StepsContent/Operation/NextBtn";

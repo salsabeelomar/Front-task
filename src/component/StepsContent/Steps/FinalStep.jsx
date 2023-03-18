@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import CosTitle from "../../CosTitle";
 import { ContDiv, GrayText, ThPa } from "../../StyledComponent";
 import { Items } from "../../../Context/itemsContext";
 import { Col, Row } from "antd";
@@ -7,6 +6,7 @@ import { BiRuler } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineDateRange, MdOutlineKingBed } from "react-icons/md";
 import { currentItems } from "../../../Context/Current";
+import StepTitle from "../../Titles/StepTitle";
 
 const FifthStep = () => {
   const { items } = useContext(Items);
@@ -14,8 +14,10 @@ const FifthStep = () => {
 
   return (
     <ContDiv>
-      {setPercent(100)}
-      <CosTitle title="نتائج الإضافة " />
+      <Row style={{ borderBottom: ".6px #EEF1F5 solid", paddingBottom: ".5rem" }}>
+        {setPercent(100)}
+        <StepTitle title="نتائج الإضافة " />
+      </Row>
       <Row>
         {items.map((ele, index) => {
           return (

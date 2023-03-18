@@ -6,7 +6,8 @@ import { StyledButton } from "../../StyledComponent";
 const BackBtn = () => {
   const { current, setCurrent } = useContext(currentItems);
   return (
-    current > 0 && (
+    current > 0 &&
+    current != 4 && (
       <StyledButton type="primary" style={{ margin: "0 8px" }} onClick={() => setCurrent(current - 1)}>
         <RightOutlined />
         الخطوة السابقة

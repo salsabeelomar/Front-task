@@ -2,7 +2,7 @@ import { Col, Row, Typography } from "antd";
 import { Content } from "antd/es/layout/layout";
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import CosTitle from "../CosTitle";
+import CosTitle from "../Titles/CusTitle";
 import { ContDiv, CusInput, ThPa } from "../StyledComponent";
 import Counter from "../Counter";
 import { currentItems } from "../../Context/Current";
