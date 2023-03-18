@@ -9,7 +9,7 @@ const Header = () => {
       justify={"end"}
       style={{
         alignItems: "baseline",
-        borderBottom: ".1rem solid rgba(245, 245, 245, 1)",
+        borderBottom: "1.4px solid rgba(245, 245, 245, 1)",
         backgroundColor: "#fff",
       }}
     >

@@ -5,8 +5,7 @@ import styled from "styled-components";
 const ContDiv = styled(Content)`
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
   margin-right: 1rem;
-  padding: 1rem;
-  height: 70vh;
+  padding: 0.2rem;
   border-radius: 24px;
 `;
 
@@ -75,12 +74,14 @@ const CusInput = styled(Input)`
   height: 35px;
   text-align: center;
   border-radius: 50px;
+  background-color: #eef1f5;
 `;
 const ThPa = styled(Paragraph)`
   color: rgba(51, 92, 135, 0.9);
   text-align: right;
   font-size: 14px;
   font-weight: 700;
+  display: block;
 `;
 const ThText = styled(Text)`
   color: rgba(51, 92, 135, 0.9);

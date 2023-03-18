@@ -3,14 +3,16 @@ import React, { useContext } from "react";
 import { ContDiv, GrayText, StyledSelect, ThPa } from "../../StyledComponent";
 import { SelectedItems } from "../../../Context/SelectedItemsContext";
 import { Items } from "../../../Context/itemsContext";
-import ThirdStep from "./ThirdStep";
+import Info from "../../SubSteps";
 import NextBtn from "../Operation/NextBtn";
 import { CloseOutlined } from "@ant-design/icons";
+import { currentItems } from "../../../Context/Current";
 
 const OPTIONS = ["أجزاكتيف", "بريمير", "ستاندرد", "ديلوكس"];
 
-const FirstStep = ({ current, setCurrent }) => {
+const FirstStep = () => {
   const { selected, setSelected } = useContext(SelectedItems);
+  const { setPercent } = useContext(currentItems);
   const { setItems } = useContext(Items);
 
   const filteredOptions = OPTIONS.filter((o) => !selected.includes(o));
@@ -21,7 +23,9 @@ const FirstStep = ({ current, setCurrent }) => {
       prev.map((ele, index) => {
         return {
           title: `تصنيف ${index + 1} ${ele}  `,
-          content: <ThirdStep current={current} setCurrent={setCurrent} />,
+          content: <Info />,
+          name: ele,
+          info: {},
         };
       })
     );
@@ -106,7 +110,11 @@ const FirstStep = ({ current, setCurrent }) => {
           </Badge>
         ))}
       </div>
-      <NextBtn current={current} setCurrent={setCurrent} />
+      <NextBtn
+        cb={() => {
+          setPercent(100);
+        }}
+      />
     </ContDiv>
   );
 };

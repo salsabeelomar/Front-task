@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Col, Row, Typography } from "antd";
 import { LeftOutlined } from "@ant-design/icons";
 import { StyledSteps, StyledButton } from "./StyledComponent";
@@ -6,25 +6,27 @@ import FirstStep from "./StepsContent/Steps/FirstStep";
 import SecondStep from "./StepsContent/Steps/SecondStep";
 import { Items } from "../Context/itemsContext";
 import { Content } from "antd/es/layout/layout";
+import { currentItems } from "../Context/Current";
+import FifthStep from "./StepsContent/Steps/FifthStep";
 
 const Step = () => {
-  const [current, setCurrent] = useState(0);
+  const { current, percent } = useContext(currentItems);
   const { items } = useContext(Items);
 
   const steps = [
     {
       title: " إختيارالتصنيفات ",
-      content: <FirstStep current={current} setCurrent={setCurrent} />,
+      content: <FirstStep />,
     },
 
     {
       title: "معلومات الوحدات ",
-      content: <SecondStep current={current} setCurrent={setCurrent} />,
+      content: <SecondStep />,
     },
     ...items,
     {
       title: "نتائج الإضافة",
-      content: <FirstStep current={current} setCurrent={setCurrent} />,
+      content: <FifthStep />,
     },
   ];
   const step = steps.map((item) => ({ key: item.title, title: item.title }));
@@ -39,7 +41,13 @@ const Step = () => {
     >
       <Row>
         <Col span={5} style={{ borderLeft: "1px solid #F5F5F5" }}>
-          <StyledSteps current={current} items={step} direction="vertical" style={{ marginTop: "1rem" }} />
+          <StyledSteps
+            percent={percent}
+            current={current}
+            items={step}
+            direction="vertical"
+            style={{ marginTop: "1rem" }}
+          />
         </Col>
         <Col span={14}>
           <Content style={{ margin: "1rem", color: "#707070" }}>
