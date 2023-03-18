@@ -5,7 +5,7 @@ import CosTitle from "../CosTitle";
 import { Items } from "../../Context/itemsContext";
 import NextBtn from "../StepsContent/Operation/NextBtn";
 import { currentItems } from "../../Context/Current";
-import { GrMapLocation } from "react-icons/gr";
+import { ImLocation2 } from "react-icons/im";
 import Geocode from "react-geocode";
 
 Geocode.setLanguage("ar");
@@ -35,7 +35,7 @@ const Location = () => {
     getAddress(location.lat, location.lng);
   };
 
-  const Marker = () => <div className="marker">{<GrMapLocation color="#D84E67" />}</div>;
+  const Marker = () => <div className="marker">{<ImLocation2 style={{ color: "#D84E67", fontSize: "24px" }} />}</div>;
 
   const defaultProps = {
     center: {
