@@ -1,41 +1,30 @@
 import React, { useContext } from "react";
-import { Tabs } from "antd";
-import { SelectedItems } from "../Context/SelectedItemsContext";
 import styled from "styled-components";
+import { Button } from "antd";
+import { ThPa } from "./StyledComponent";
+import { Items } from "../Context/itemsContext";
 
-const TRR = styled(Tabs)`
-  .ant-tabs .ant-tabs-tab:hover {
-    color: red !important;
-  }
-  .ant-tabs .ant-tabs-tab:active {
-    color: #335c87 !important;
-  }
-  .ant-tabs-tab ant-tabs-tab-active {
-    color: red !important;
-    border-radius: 24px;
-    background-color: red;
-  }
-  .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab {
-    color: #335c87 !important;
-  }
+const Btn = styled(Button)`
+  color: #335c87;
+  border: 1.2px #d84e67 solid;
+  background-color: #ffff;
+  font-size: 14px;
+  display: block;
+  text-align: right;
+  margin: 0.5rem;
+  width: 150px;
 `;
 const Tap = () => {
-  const { selected } = useContext(SelectedItems);
+  const { items } = useContext(Items);
   return (
-    <TRR
-      defaultActiveKey="1"
-      tabPosition="left"
-      style={{
-        height: 220,
-      }}
-      items={selected.map((ele, index) => {
-        return {
-          label: `${ele}`,
-          key: index,
-          //   children: <ForthStep />,
-        };
-      })}
-    />
+    <>
+      <ThPa>التصنيفات </ThPa>
+      {items.map((ele, index) => (
+        <Btn key={index} type="primary">
+          {ele.name}
+        </Btn>
+      ))}
+    </>
   );
 };
 export default Tap;

@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #335c87;
+  --primary-color-darken: white;
+  --primary-hover-color: var(--primary-color-darken);
+}
+.ant-btn-primary:hover {
+  background-color: white !important;
+  color: #335c87 !important;
+}
+
+.ant-steps-item .ant-steps-item-icon {
+  float: right !important;
+  margin-inline-end: 16px;
+}
+.ant-steps-item-title {
+color:#335C87 !important;
+}
+
+.ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after {
+  background-color: #D84E67;
+}
+.ant-steps-item-finish .ant-steps-item-icon >.ant-steps-icon {
+  color: #fff;
+}
+  .ant-steps-item-wait .ant-steps-item-icon {
+    color:  #D84E67;
+  }
+  .ant-steps .ant-steps-item-title{
+    color: #335C87;
+}
+
+   .ant-steps-item-process .ant-steps-item-icon {
+    background-color: #D84E67;
+    border-color: #D84E67;
+}
+  .ant-steps-item-finish .ant-steps-item-icon {
+    color: #FFFFFF;
+    background-color: #D84E67;
+    border-color: #D84E67;
+  }
+ 

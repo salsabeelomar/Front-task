@@ -6,10 +6,14 @@ const ContDiv = styled(Content)`
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
   margin-right: 1rem;
   padding: 1rem;
-  height: 70vh;
   border-radius: 24px;
 `;
-
+const MapContainer = styled.div`
+  width: 100%;
+  height: 500px;
+  margin: 1rem auto;
+  border-radius: 1.5rem;
+`;
 const StyledSteps = styled(Steps)`
 .ant-steps-item .ant-steps-item-icon {
   float: right !important;
@@ -75,12 +79,15 @@ const CusInput = styled(Input)`
   height: 35px;
   text-align: center;
   border-radius: 50px;
+  background-color: #eef1f5;
 `;
 const ThPa = styled(Paragraph)`
   color: rgba(51, 92, 135, 0.9);
   text-align: right;
   font-size: 14px;
   font-weight: 700;
+  margin-right: 1rem;
+  display: block;
 `;
 const ThText = styled(Text)`
   color: rgba(51, 92, 135, 0.9);
@@ -91,5 +98,17 @@ const ThText = styled(Text)`
 const GrayText = styled(Text)`
   color: #9f9f9f;
   margin-top: 0.2rem;
+  display: block;
 `;
-export { StyledSteps, StyledButton, StyledSelect, ContDiv, OperationBtn, ThPa, ThText, CusInput, GrayText };
+export {
+  StyledSteps,
+  StyledButton,
+  StyledSelect,
+  ContDiv,
+  OperationBtn,
+  ThPa,
+  ThText,
+  CusInput,
+  GrayText,
+  MapContainer,
+};

@@ -1,7 +1,9 @@
 import { Button } from "antd";
-import React from "react";
+import React, { useContext } from "react";
+import { currentItems } from "../../../Context/Current";
 
-const NextBtn = ({ current, setCurrent }) => {
+const NextBtn = ({ cb }) => {
+  const { current, setCurrent, percent } = useContext(currentItems);
   return (
     <Button
       style={{
@@ -11,9 +13,15 @@ const NextBtn = ({ current, setCurrent }) => {
         borderRadius: "50px",
         color: "#fff",
         border: "none",
+        margin: "1rem",
         boxShadow: "0px 10px 30px 0px rgba(216, 78, 103, 0.12)",
       }}
-      onClick={() => setCurrent(current + 1)}
+      onClick={() => {
+        cb();
+        if (percent >= 100) {
+          setCurrent(current + 1);
+        }
+      }}
     >
       التالي
     </Button>
