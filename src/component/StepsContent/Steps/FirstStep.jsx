@@ -1,12 +1,12 @@
 import { Typography, Select, Badge } from "antd";
 import React, { useContext } from "react";
 import { ContDiv, GrayText, StyledSelect, ThPa } from "../../StyledComponent";
-import { SelectedItems } from "../../../Context/SelectedItemsContext";
 import { Items } from "../../../Context/itemsContext";
 import Info from "../../SubSteps";
 import NextBtn from "../Operation/NextBtn";
 import { CloseOutlined } from "@ant-design/icons";
 import { currentItems } from "../../../Context/Current";
+import { SelectedItems } from "../../../Context/SelectedItemsContext";
 
 const OPTIONS = ["أجزاكتيف", "بريمير", "ستاندرد", "ديلوكس"];
 

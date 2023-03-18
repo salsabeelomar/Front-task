@@ -6,12 +6,15 @@ import { Col, Row } from "antd";
 import { BiRuler } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineDateRange, MdOutlineKingBed } from "react-icons/md";
+import { currentItems } from "../../../Context/Current";
 
 const FifthStep = () => {
   const { items } = useContext(Items);
-  console.log(items);
+  const { setPercent } = useContext(currentItems);
+
   return (
     <ContDiv>
+      {setPercent(100)}
       <CosTitle title="نتائج الإضافة " />
       <Row>
         {items.map((ele, index) => {
