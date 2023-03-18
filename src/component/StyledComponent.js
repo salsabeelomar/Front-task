@@ -8,7 +8,12 @@ const ContDiv = styled(Content)`
   padding: 0.2rem;
   border-radius: 24px;
 `;
-
+const MapContainer = styled.div`
+  width: 100%;
+  height: 500px;
+  margin: 1rem auto;
+  border-radius: 1.5rem;
+`;
 const StyledSteps = styled(Steps)`
 .ant-steps-item .ant-steps-item-icon {
   float: right !important;
@@ -93,4 +98,15 @@ const GrayText = styled(Text)`
   color: #9f9f9f;
   margin-top: 0.2rem;
 `;
-export { StyledSteps, StyledButton, StyledSelect, ContDiv, OperationBtn, ThPa, ThText, CusInput, GrayText };
+export {
+  StyledSteps,
+  StyledButton,
+  StyledSelect,
+  ContDiv,
+  OperationBtn,
+  ThPa,
+  ThText,
+  CusInput,
+  GrayText,
+  MapContainer,
+};

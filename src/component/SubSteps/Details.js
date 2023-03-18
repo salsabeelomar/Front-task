@@ -1,10 +1,13 @@
 import { Col, Row, Typography } from "antd";
 import { Content } from "antd/es/layout/layout";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import CosTitle from "../CosTitle";
 import { ContDiv, CusInput, ThPa } from "../StyledComponent";
 import Counter from "../Counter";
+import { currentItems } from "../../Context/Current";
+import NextBtn from "../StepsContent/Operation/NextBtn";
+import { Items } from "../../Context/itemsContext";
 
 const DivStyle = styled.div`
   display: flex;
@@ -15,6 +18,8 @@ const DivStyle = styled.div`
 `;
 const Details = () => {
   const [details, setDetails] = useState({ space: 0, rooms: [] });
+  const { setStep, setPercent, current } = useContext(currentItems);
+  const { setItems } = useContext(Items);
   return (
     <ContDiv>
       <CosTitle title="التفاصيل" />
@@ -80,6 +85,16 @@ const Details = () => {
               );
             })}
           </div>
+          <NextBtn
+            cb={() => {
+              setStep(4);
+              setPercent(100);
+              setItems((prev) => {
+                prev[current - 2].info.Details = details;
+                return prev;
+              });
+            }}
+          />
         </Col>
       </Row>
     </ContDiv>

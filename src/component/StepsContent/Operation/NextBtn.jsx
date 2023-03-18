@@ -13,6 +13,7 @@ const NextBtn = ({ cb }) => {
         borderRadius: "50px",
         color: "#fff",
         border: "none",
+        margin: "1rem",
         boxShadow: "0px 10px 30px 0px rgba(216, 78, 103, 0.12)",
       }}
       onClick={() => {

@@ -19,6 +19,7 @@ const FirstStep = () => {
   const handleChange = (value) => {
     setSelected(value);
     setItems(value);
+    setPercent(100);
     setItems((prev) =>
       prev.map((ele, index) => {
         return {
@@ -80,6 +81,7 @@ const FirstStep = () => {
                 style={{ color: " #EBF5FB", fontSize: "8px", width: "14px", height: "14px" }}
                 onClick={() => {
                   {
+                    setPercent(0);
                     setSelected(() =>
                       selected.filter((ele, index2) => {
                         if (index2 === index) return;
@@ -110,11 +112,7 @@ const FirstStep = () => {
           </Badge>
         ))}
       </div>
-      <NextBtn
-        cb={() => {
-          setPercent(100);
-        }}
-      />
+      <NextBtn cb={() => {}} />
     </ContDiv>
   );
 };

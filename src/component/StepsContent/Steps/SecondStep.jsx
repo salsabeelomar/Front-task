@@ -7,9 +7,12 @@ import Tap from "../../Taps";
 import Counter from "../../Counter";
 import NextBtn from "../Operation/NextBtn";
 import { currentItems } from "../../../Context/Current";
+import { Items } from "../../../Context/itemsContext";
 const SecondStep = () => {
-  const { setPercent } = useContext(currentItems);
+  const { setPercent, current } = useContext(currentItems);
+  const { setItems } = useContext(Items);
   const [numRoom, setNumRoom] = useState([]);
+
   return (
     <ContDiv>
       <CosTitle title="معلومات الوحدات" />
@@ -64,6 +67,10 @@ const SecondStep = () => {
         </Col>
         <NextBtn
           cb={() => {
+            setItems((prev) => {
+              prev[current - 1].info = { Units: numRoom };
+              return prev;
+            });
             setPercent(0);
           }}
         />
