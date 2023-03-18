@@ -2,12 +2,10 @@ import React, { useContext } from "react";
 import { Col, Row, Typography } from "antd";
 import { LeftOutlined } from "@ant-design/icons";
 import { StyledSteps, StyledButton } from "./StyledComponent";
-import FirstStep from "./StepsContent/Steps/FirstStep";
-import SecondStep from "./StepsContent/Steps/SecondStep";
+import { FirstStep, SecondStep, FinalStep } from "./StepsContent/Steps";
 import { Items } from "../Context/itemsContext";
 import { Content } from "antd/es/layout/layout";
 import { currentItems } from "../Context/Current";
-import FifthStep from "./StepsContent/Steps/FifthStep";
 
 const Step = () => {
   const { current, percent } = useContext(currentItems);
@@ -26,7 +24,7 @@ const Step = () => {
     ...items,
     {
       title: "نتائج الإضافة",
-      content: <FifthStep />,
+      content: <FinalStep />,
     },
   ];
   const step = steps.map((item) => ({ key: item.title, title: item.title }));
