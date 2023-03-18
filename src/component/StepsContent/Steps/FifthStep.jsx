@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import CosTitle from "../../CosTitle";
 import { ContDiv, GrayText, ThPa } from "../../StyledComponent";
 import { Items } from "../../../Context/itemsContext";
-import { Row } from "antd";
-import { Content } from "antd/es/layout/layout";
+import { Col, Row } from "antd";
 import { BiRuler } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineDateRange, MdOutlineKingBed } from "react-icons/md";
@@ -17,28 +16,28 @@ const FifthStep = () => {
       <Row>
         {items.map((ele, index) => {
           return (
-            <Content key={index}>
+            <Col key={index}>
               <ThPa> {ele.name}</ThPa>
               <div>
-                <GrayText style={{ display: "block" }}>
+                <GrayText>
                   <CiLocationOn />
                   {ele.info.Address}
                 </GrayText>
-                <GrayText style={{ display: "block" }}>
+                <GrayText>
                   <BiRuler />
                   مساحة الوحدة
-                  {ele.info.Details.space}
+                  {ele.info.Details.space}م
                 </GrayText>
-                <GrayText style={{ display: "block" }}>
+                <GrayText>
                   <MdOutlineKingBed />
                   {ele.info.Details.rooms.length}غرف نوم
                 </GrayText>
-                <GrayText style={{ display: "block" }}>
+                <GrayText>
                   <MdOutlineDateRange />
                   {ele.info.Date}
                 </GrayText>
               </div>
-            </Content>
+            </Col>
           );
         })}
       </Row>

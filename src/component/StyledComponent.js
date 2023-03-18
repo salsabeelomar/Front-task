@@ -5,7 +5,7 @@ import styled from "styled-components";
 const ContDiv = styled(Content)`
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
   margin-right: 1rem;
-  padding: 0.2rem;
+  padding: 1rem;
   border-radius: 24px;
 `;
 const MapContainer = styled.div`
@@ -86,6 +86,7 @@ const ThPa = styled(Paragraph)`
   text-align: right;
   font-size: 14px;
   font-weight: 700;
+  margin-right: 1rem;
   display: block;
 `;
 const ThText = styled(Text)`
@@ -97,6 +98,7 @@ const ThText = styled(Text)`
 const GrayText = styled(Text)`
   color: #9f9f9f;
   margin-top: 0.2rem;
+  display: block;
 `;
 export {
   StyledSteps,

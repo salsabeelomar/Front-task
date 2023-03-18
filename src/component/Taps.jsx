@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { SelectedItems } from "../Context/SelectedItemsContext";
 import styled from "styled-components";
 import { Button } from "antd";
 import { ThPa } from "./StyledComponent";
+import { Items } from "../Context/itemsContext";
 
 const Btn = styled(Button)`
   color: #335c87;
@@ -10,18 +10,18 @@ const Btn = styled(Button)`
   background-color: #ffff;
   font-size: 14px;
   display: block;
+  text-align: right;
   margin: 0.5rem;
-  width: 120px;
+  width: 150px;
 `;
 const Tap = () => {
-  const { selected } = useContext(SelectedItems);
-
+  const { items } = useContext(Items);
   return (
     <>
       <ThPa>التصنيفات </ThPa>
-      {selected.map((ele, index) => (
+      {items.map((ele, index) => (
         <Btn key={index} type="primary">
-          {ele}
+          {ele.name}
         </Btn>
       ))}
     </>

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import GoogleMapReact from "google-map-react";
-import { ContDiv, MapContainer } from "../StyledComponent";
+import { ContDiv, GrayText, MapContainer, ThPa } from "../StyledComponent";
 import CosTitle from "../CosTitle";
 import { Items } from "../../Context/itemsContext";
 import NextBtn from "../StepsContent/Operation/NextBtn";
@@ -61,8 +61,8 @@ const Location = () => {
           {location && <Marker lat={location.lat} lng={location.lng} />}
         </GoogleMapReact>
       </MapContainer>
-      <p>الموقع الذي تم إختياره</p>
-      <p> {address}</p>
+      <ThPa>الموقع الذي تم إختياره</ThPa>
+      <GrayText> {address}</GrayText>
       <NextBtn
         cb={() => {
           setStep(2);
