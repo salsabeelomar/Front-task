@@ -59,12 +59,14 @@ const Calendar = () => {
           />
           <NextBtn
             cb={() => {
-              setStep(3);
-              setPercent(60);
-              setItems((prev) => {
-                prev[current - 2].info.Date = date;
-                return prev;
-              });
+              if (date !== 0) {
+                setStep(3);
+                setPercent(60);
+                setItems((prev) => {
+                  prev[current - 2].info.Date = date;
+                  return prev;
+                });
+              }
             }}
           />
         </Col>

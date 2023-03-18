@@ -65,12 +65,14 @@ const Location = () => {
       <GrayText> {address}</GrayText>
       <NextBtn
         cb={() => {
-          setStep(2);
-          setPercent(35);
-          setItems((prev) => {
-            prev[current - 2].info.Address = address;
-            return prev;
-          });
+          if (address !== "") {
+            setStep(2);
+            setPercent(35);
+            setItems((prev) => {
+              prev[current - 2].info.Address = address;
+              return prev;
+            });
+          }
         }}
       />
     </ContDiv>

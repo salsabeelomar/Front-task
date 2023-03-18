@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header2 from "./component/Header";
 import { Layout } from "antd";
 import "./style.css";
@@ -9,10 +9,6 @@ import CosMenu from "./component/Menu";
 import { CurrentProvider } from "./Context/Current";
 
 const App = () => {
-  useEffect(() => {
-    document.body.dir = "rtl";
-  }, []);
-
   return (
     <Layout>
       <CosMenu />

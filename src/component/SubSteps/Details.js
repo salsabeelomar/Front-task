@@ -87,12 +87,14 @@ const Details = () => {
           </div>
           <NextBtn
             cb={() => {
-              setStep(4);
-              setPercent(100);
-              setItems((prev) => {
-                prev[current - 2].info.Details = details;
-                return prev;
-              });
+              if (details.rooms.length > 0 && details.space > 0) {
+                setStep(4);
+                setPercent(100);
+                setItems((prev) => {
+                  prev[current - 2].info.Details = details;
+                  return prev;
+                });
+              }
             }}
           />
         </Col>
