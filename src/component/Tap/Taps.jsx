@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Col, Tabs } from "antd";
-import { ThPa } from "./StyledComponent";
-import { Items } from "../Context/itemsContext";
-import TabContent from "./TabContent";
+import { ThPa } from "../StyledComponent";
+import { Items } from "../../Context/itemsContext";
+import TabContent from "./Content";
 const Tap = () => {
   const { items } = useContext(Items);
   const [numRoom, setNumRoom] = useState([]);

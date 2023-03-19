@@ -10,7 +10,7 @@ const ContDiv = styled(Content)`
 `;
 const MapContainer = styled.div`
   width: 100%;
-  height: 500px;
+  height: 350px;
   margin: 1rem auto;
   border-radius: 1.5rem;
 `;
