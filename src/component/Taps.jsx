@@ -1,29 +1,35 @@
 import React, { useContext } from "react";
-import { SelectedItems } from "../Context/SelectedItemsContext";
-import styled from "styled-components";
-import { Button } from "antd";
+import { Tabs } from "antd";
 import { ThPa } from "./StyledComponent";
+import { Items } from "../Context/itemsContext";
 
-const Btn = styled(Button)`
-  color: #335c87;
-  border: 1.2px #d84e67 solid;
-  background-color: #ffff;
-  font-size: 14px;
-  display: block;
-  margin: 0.5rem;
-  width: 120px;
-`;
+// const Btn = styled(Button)`
+//   color: #335c87;
+//   border: 1.2px #d84e67 solid;
+//   background-color: #ffff;
+//   font-size: 14px;
+//   display: block;
+//   margin: 0.5rem;
+//   width: 120px;
+// `;
 const Tap = () => {
-  const { selected } = useContext(SelectedItems);
+  const { items } = useContext(Items);
 
   return (
     <>
       <ThPa>التصنيفات </ThPa>
-      {selected.map((ele, index) => (
-        <Btn key={index} type="primary">
-          {ele}
-        </Btn>
-      ))}
+      <Tabs
+        defaultActiveKey="1"
+        tabPosition="right"
+        style={{ height: 220 }}
+        items={items.map((ele, index) => {
+          return {
+            label: `${ele.name}`,
+            key: index,
+            children: `Content of tab ${index}`,
+          };
+        })}
+      />
     </>
   );
 };
