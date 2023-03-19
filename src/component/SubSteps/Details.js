@@ -1,4 +1,4 @@
-import { Col, Row, Typography } from "antd";
+import { Button, Col, Row, Typography } from "antd";
 import { Content } from "antd/es/layout/layout";
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
@@ -16,10 +16,22 @@ const DivStyle = styled.div`
   font-weight: bold;
   font-size: 12px;
 `;
+
 const Details = () => {
   const [details, setDetails] = useState({ space: 0, rooms: [] });
   const { setStep, setPercent, current } = useContext(currentItems);
   const { setItems } = useContext(Items);
+
+  const handleDelete = (index) => {
+    setDetails((prev) => {
+      return {
+        ...prev,
+        rooms: details.rooms.filter((ele, i) => {
+          if (index !== i) return ele;
+        }),
+      };
+    });
+  };
   return (
     <ContDiv>
       <CusTitle title="التفاصيل" />
@@ -65,7 +77,10 @@ const Details = () => {
                 <Content key={index}>
                   <DivStyle style={{ width: "95%" }}>
                     <Typography.Text style={{ color: "#D84E67" }}> غرفة رقم {ele.key + 1}</Typography.Text>
-                    <Typography.Text style={{ color: "#D84E67" }}> حذف الغرفة</Typography.Text>
+                    <Button onClick={() => handleDelete(index)} style={{ color: "#D84E67", border: "none" }}>
+                      {" "}
+                      حذف الغرفة
+                    </Button>
                   </DivStyle>
                   <div style={{ width: "250px" }}>
                     <DivStyle>

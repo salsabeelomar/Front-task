@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ContDiv, GrayText, ThPa } from "../../StyledComponent";
 import { Items } from "../../../Context/itemsContext";
 import { Col, Row } from "antd";
@@ -8,14 +8,15 @@ import { MdOutlineDateRange, MdOutlineKingBed } from "react-icons/md";
 import { currentItems } from "../../../Context/Current";
 import StepTitle from "../../Titles/StepTitle";
 
-const FifthStep = () => {
+const FinalStep = () => {
   const { items } = useContext(Items);
   const { setPercent } = useContext(currentItems);
-
+  useEffect(() => {
+    setPercent(100);
+  }, []);
   return (
     <ContDiv>
       <Row style={{ borderBottom: ".6px #EEF1F5 solid", paddingBottom: ".5rem" }}>
-        {setPercent(100)}
         <StepTitle title="نتائج الإضافة " />
       </Row>
       <Row>
@@ -49,4 +50,4 @@ const FifthStep = () => {
     </ContDiv>
   );
 };
-export default FifthStep;
+export default FinalStep;

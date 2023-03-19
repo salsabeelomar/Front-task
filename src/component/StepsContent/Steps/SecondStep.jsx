@@ -2,7 +2,7 @@ import { Row } from "antd";
 import React, { useContext } from "react";
 import CusTitle from "../../Titles/CusTitle";
 import { ContDiv, GrayText } from "../../StyledComponent";
-import Tap from "../../Taps";
+import Tap from "../../Tap/Taps";
 import NextBtn from "../Operation/NextBtn";
 import { currentItems } from "../../../Context/Current";
 const SecondStep = () => {

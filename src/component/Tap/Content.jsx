@@ -1,8 +1,8 @@
 import { Col } from "antd";
 import { Content } from "antd/es/layout/layout";
 import React from "react";
-import Counter from "./Counter";
-import { CusInput, ThPa, ThText } from "./StyledComponent";
+import Counter from "../Counter";
+import { CusInput, ThPa, ThText } from "../StyledComponent";
 
 const TabContent = ({ setNumRoom, numRoom }) => {
   return (
