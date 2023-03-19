@@ -2,7 +2,7 @@ import { Col, Row, Typography } from "antd";
 import { Content } from "antd/es/layout/layout";
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import CosTitle from "../Titles/CusTitle";
+import CusTitle from "../Titles/CusTitle";
 import { ContDiv, CusInput, ThPa } from "../StyledComponent";
 import Counter from "../Counter";
 import { currentItems } from "../../Context/Current";
@@ -22,7 +22,7 @@ const Details = () => {
   const { setItems } = useContext(Items);
   return (
     <ContDiv>
-      <CosTitle title="التفاصيل" />
+      <CusTitle title="التفاصيل" />
       <Row>
         <Col span={24}>
           <div style={{ borderBottom: ".6px solid rgba(199, 199, 199, 0.36)", paddingBottom: "1rem" }}>

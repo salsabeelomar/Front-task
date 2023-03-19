@@ -1,30 +1,27 @@
-import React, { useContext } from "react";
-import styled from "styled-components";
-import { Button } from "antd";
+import React, { useContext, useState } from "react";
+import { Col, Tabs } from "antd";
 import { ThPa } from "./StyledComponent";
 import { Items } from "../Context/itemsContext";
-
-const Btn = styled(Button)`
-  color: #335c87;
-  border: 1.2px #d84e67 solid;
-  background-color: #ffff;
-  font-size: 14px;
-  display: block;
-  text-align: right;
-  margin: 0.5rem;
-  width: 150px;
-`;
+import TabContent from "./TabContent";
 const Tap = () => {
   const { items } = useContext(Items);
+  const [numRoom, setNumRoom] = useState([]);
+
   return (
-    <>
+    <Col span={24}>
       <ThPa>التصنيفات </ThPa>
-      {items.map((ele, index) => (
-        <Btn key={index} type="primary">
-          {ele.name}
-        </Btn>
-      ))}
-    </>
+      <Tabs
+        defaultActiveKey="1"
+        tabPosition="left"
+        items={items.map((ele, index) => {
+          return {
+            label: `${ele.name}`,
+            key: index,
+            children: <TabContent numRoom={numRoom} setNumRoom={setNumRoom} />,
+          };
+        })}
+      />
+    </Col>
   );
 };
 export default Tap;

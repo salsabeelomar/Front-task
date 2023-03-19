@@ -6,7 +6,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezone from "moment-timezone";
 import arLocale from "@fullcalendar/core/locales/ar";
 import { ContDiv } from "../StyledComponent";
-import CosTitle from "../Titles/CusTitle";
+import CusTitle from "../Titles/CusTitle";
 import { Col, Row } from "antd";
 import NextBtn from "../StepsContent/Operation/NextBtn";
 import { currentItems } from "../../Context/Current";
@@ -19,7 +19,7 @@ const Calendar = () => {
   momentTimezone.tz.setDefault("Asia/Gaza");
   return (
     <ContDiv>
-      <CosTitle title="التقويم" />
+      <CusTitle title="التقويم" />
       <Row>
         <Col span={24}>
           <FullCalendar

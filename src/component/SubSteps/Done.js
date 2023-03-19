@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { currentItems } from "../../Context/Current";
 import { Items } from "../../Context/itemsContext";
-import CosTitle from "../Titles/CusTitle";
+import CusTitle from "../Titles/CusTitle";
 import { ContDiv, GrayText } from "../StyledComponent";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import NextBtn from "../StepsContent/Operation/NextBtn";
@@ -11,7 +11,7 @@ const Done = () => {
   const title = `(تصنيف ${current - 1} من ${items.length}) ${items[current - 2].name} `;
   return (
     <ContDiv>
-      <CosTitle title={title} />
+      <CusTitle title={title} />
       <div style={{ display: "flex", justifyContent: "flex-start", gap: ".2rem", margin: "1rem" }}>
         <AiOutlineCheckCircle color="#00A91B" style={{ width: "50px", height: "50px" }} />
         <GrayText>
