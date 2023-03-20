@@ -3,7 +3,7 @@ import Header2 from "./component/Header";
 import { Layout } from "antd";
 import "./style.css";
 import Step from "./component/Steps";
-import { SelectProvider, ItemProvider, CurrentProvider } from "./Context/";
+import { ItemProvider, CurrentProvider } from "./Context/";
 import CosMenu from "./component/Menu";
 
 const App = () => {
@@ -12,13 +12,11 @@ const App = () => {
       <CosMenu />
       <Layout className="site-layout" style={{ backgroundColor: "white" }}>
         <Header2 />
-        <SelectProvider>
-          <ItemProvider>
-            <CurrentProvider>
-              <Step />
-            </CurrentProvider>
-          </ItemProvider>
-        </SelectProvider>
+        <ItemProvider>
+          <CurrentProvider>
+            <Step />
+          </CurrentProvider>
+        </ItemProvider>
       </Layout>
     </Layout>
   );
