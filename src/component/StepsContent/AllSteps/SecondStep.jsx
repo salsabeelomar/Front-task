@@ -4,7 +4,7 @@ import CusTitle from "../../Titles/CusTitle";
 import { ContDiv, GrayText } from "../../StyledComponent";
 import Tap from "../../Tap/Taps";
 import NextBtn from "../Operation/NextBtn";
-import { currentItems } from "../../../Context/Current";
+import { currentItems } from "../../../Context";
 const SecondStep = () => {
   const { setPercent } = useContext(currentItems);
   return (

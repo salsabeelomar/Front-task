@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { currentItems } from "../../Context/Current";
+import { currentItems } from "../../../Context/Current";
 import Calendar from "./Calender";
 import Details from "./Details";
 import Done from "./Done";

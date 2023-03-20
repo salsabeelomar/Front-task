@@ -5,12 +5,11 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezone from "moment-timezone";
 import arLocale from "@fullcalendar/core/locales/ar";
-import { ContDiv } from "../StyledComponent";
-import CusTitle from "../Titles/CusTitle";
+import { ContDiv } from "../../StyledComponent";
+import CusTitle from "../../Titles/CusTitle";
 import { Col, Row } from "antd";
-import NextBtn from "../StepsContent/Operation/NextBtn";
-import { currentItems } from "../../Context/Current";
-import { Items } from "../../Context/itemsContext";
+import NextBtn from "../../StepsContent/Operation/NextBtn";
+import { currentItems, Items } from "../../../Context";
 
 const Calendar = () => {
   const { current, setStep, setPercent } = useContext(currentItems);

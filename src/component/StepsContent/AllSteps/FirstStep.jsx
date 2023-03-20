@@ -1,17 +1,16 @@
 import { Typography, Select, Badge } from "antd";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ContDiv, GrayText, StyledSelect, ThPa } from "../../StyledComponent";
 import { Items } from "../../../Context/itemsContext";
-import Info from "../../SubSteps";
+import Info from "../SubSteps";
 import NextBtn from "../Operation/NextBtn";
 import { CloseOutlined } from "@ant-design/icons";
 import { currentItems } from "../../../Context/Current";
-import { SelectedItems } from "../../../Context/SelectedItemsContext";
 
 const OPTIONS = ["أجزاكتيف", "بريمير", "ستاندرد", "ديلوكس"];
 
 const FirstStep = () => {
-  const { selected, setSelected } = useContext(SelectedItems);
+  const [selected, setSelected] = useState([]);
   const { setPercent } = useContext(currentItems);
   const { setItems } = useContext(Items);
 

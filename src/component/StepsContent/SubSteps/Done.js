@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
-import { currentItems } from "../../Context/Current";
-import { Items } from "../../Context/itemsContext";
-import CusTitle from "../Titles/CusTitle";
-import { ContDiv, GrayText } from "../StyledComponent";
+import { currentItems, Items } from "../../../Context";
+import CusTitle from "../../Titles/CusTitle";
+import { ContDiv, GrayText } from "../../StyledComponent";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import NextBtn from "../StepsContent/Operation/NextBtn";
+import NextBtn from "../../StepsContent/Operation/NextBtn";
 const Done = () => {
   const { current, setStep, setPercent } = useContext(currentItems);
   const { items } = useContext(Items);

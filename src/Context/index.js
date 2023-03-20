@@ -1,5 +1,4 @@
-import { SelectProvider } from "./SelectedItemsContext";
-import { ItemProvider } from "./itemsContext";
-import { CurrentProvider } from "./Current";
+import { ItemProvider, Items } from "./itemsContext";
+import { CurrentProvider, currentItems } from "./Current";
 
-export { SelectProvider, ItemProvider, CurrentProvider };
+export { ItemProvider, CurrentProvider, Items, currentItems };
